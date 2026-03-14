@@ -6,8 +6,8 @@ document.getElementById("mainContent").style.display="block";
 /* start music */
 document.getElementById("bgMusic").play();
 
-/* start rose petals */
-setInterval(createPetal,200);
+/* start petals once */
+startPetals();
 
 }
 
@@ -15,7 +15,12 @@ setInterval(createPetal,200);
 /* LETTER POPUP */
 
 function openLetter(){
+
 document.getElementById("letter").style.display="flex";
+
+/* extra flowers when letter opens */
+startPetals();
+
 }
 
 function closeLetter(){
@@ -65,21 +70,37 @@ heart.remove();
 
 }
 
-setInterval(createHeart,700);
+setInterval(createHeart,900);
 
 
-/* ROSE PETALS FALLING */
+/* ROSE / FLOWER PETALS */
+
+let petalInterval;
+
+function startPetals(){
+
+if(!petalInterval){
+
+petalInterval=setInterval(createPetal,200);
+
+}
+
+}
 
 function createPetal(){
 
 let petal=document.createElement("span");
 
-petal.innerHTML="🌹";
+/* random flowers */
+
+let flowers=["🌹","🌸","🌺","💮"];
+
+petal.innerHTML=flowers[Math.floor(Math.random()*flowers.length)];
 
 petal.style.position="fixed";
 petal.style.left=Math.random()*100+"%";
 petal.style.top="-20px";
-petal.style.fontSize="20px";
+petal.style.fontSize="22px";
 petal.style.animation="fall 5s linear";
 
 document.body.appendChild(petal);
