@@ -2,7 +2,7 @@ function startSurprise(){
 
 document.getElementById("startScreen").style.display="none";
 document.getElementById("mainContent").style.display="block";
-
+document.getElementById("bgMusic").play();
 }
 
 
