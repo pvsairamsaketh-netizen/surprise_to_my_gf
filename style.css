@@ -6,6 +6,8 @@ text-align:center;
 overflow-x:hidden;
 }
 
+/* START SCREEN */
+
 #startScreen{
 position:fixed;
 width:100%;
@@ -23,6 +25,8 @@ cursor:pointer;
 z-index:1000;
 }
 
+/* MAIN CONTAINER */
+
 .container{
 
 display:none;
@@ -35,12 +39,15 @@ align-items:center;
 
 }
 
+/* TITLE */
 
 .title{
 font-family:'Great Vibes';
 font-size:64px;
 color:#ff4d88;
 }
+
+/* SUBTITLE */
 
 .subtitle{
 font-size:20px;
@@ -50,6 +57,8 @@ color:#666;
 .note{
 margin-top:10px;
 }
+
+/* BUTTON */
 
 .btn{
 
@@ -73,6 +82,7 @@ transition:0.3s;
 transform:scale(1.1);
 }
 
+/* GALLERY */
 
 .gallery{
 
@@ -89,6 +99,8 @@ height:420px;
 position:relative;
 
 }
+
+/* SLIDES */
 
 .slide{
 
@@ -113,6 +125,8 @@ box-shadow:0 20px 40px rgba(0,0,0,0.25);
 opacity:1;
 }
 
+/* MEMORY TEXT */
+
 .memoryText{
 
 margin-top:40px;
@@ -124,6 +138,7 @@ color:#ff4d88;
 
 }
 
+/* POPUP BACKGROUND */
 
 .popup{
 
@@ -143,6 +158,8 @@ justify-content:center;
 
 }
 
+/* LETTER BOX */
+
 .letter-box{
 
 background:white;
@@ -157,16 +174,15 @@ box-shadow:0 20px 40px rgba(0,0,0,0.25);
 
 }
 
+/* FINAL TEXT */
+
 .final{
 font-weight:600;
 color:#ff4d88;
 margin-top:10px;
 }
-@keyframes float {
-  0%{transform: translateY(0);}
-  100%{transform: translateY(-20px);}
-}
 
+/* CLOSE BUTTON */
 
 .closeBtn{
 
@@ -185,6 +201,7 @@ cursor:pointer;
 
 }
 
+/* HEARTS */
 
 .hearts span{
 
@@ -200,6 +217,8 @@ opacity:0.7;
 
 }
 
+/* HEART FLOAT ANIMATION */
+
 @keyframes float{
 
 0%{
@@ -210,5 +229,20 @@ transform:translateY(0);
 transform:translateY(-100vh);
 }
 
+}
+
+/* ROSE PETAL FALL ANIMATION */
+
+@keyframes fall{
+
+0%{
+transform:translateY(0);
+opacity:1;
+}
+
+100%{
+transform:translateY(100vh);
+opacity:0;
+}
 
 }
